@@ -1,7 +1,9 @@
 import{useState} from 'react'
 
 const Contador = (props)=>{
-    const [numero, setNumero] = useState(inicialValue || 0)
+
+    const {initialValue} = props
+    const [numero, setNumero] = useState(initialValue|| 0)
 
     const sumar =()=>{
        setNumero (numero + 1)
@@ -11,25 +13,17 @@ const Contador = (props)=>{
         setNumero (numero - 1)
      }
 
-     const resetear =()=>{
-        setNumero (0)
-     }
-
 
 return (
-    <div className='d-flex justify-araund'>
+    <div className='container d-flex justify-content-center align-items-center card-text'>
         <div>
-            <button onClick={restar}>Restar</button>
+            <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{backgroundColor: "#a6be06"}} onClick={restar}>sacar del carrito </button>
         </div>
-        <h3 className='text-center'>Número actuak es : {numero}</h3> 
+        <h3 className='card-text'>Total de productos : {numero}</h3> 
         {props.greeting}
         <div>
-            <button onClick={sumar}>Sumar</button>
+            <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{backgroundColor: "#a6be06"}} onClick={sumar}>Agregar al carrito</button>
         </div>
-        <div>
-            <button onClick={resetear}>Resetear</button>
-        </div>
-
     </div>
 )
 

@@ -4,7 +4,7 @@ export const Navlink = (props) => {
   return (
     <div>
         <li className="nav-item">
-          <p className="nav-link active" aria-current="page">{props.navLinkName}</p>
+          <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{backgroundColor: "#a6be06"}}>{props.navLinkName}</button>
         </li>
     </div>
   )
