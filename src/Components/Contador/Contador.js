@@ -17,12 +17,12 @@ const Contador = (props)=>{
 return (
     <div className='container d-flex justify-content-center align-items-center card-text'>
         <div>
-            <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{backgroundColor: "#a6be06"}} onClick={restar}>sacar del carrito </button>
+            <button type="button" className="btn btn-primary btn-sm btn-floating mx-auto" style={{backgroundColor: "#a6be06"}} onClick={restar}>sacar del carrito </button>
         </div>
-        <h3 className='card-text'>Total de productos : {numero}</h3> 
+        <h3 className='card-text btn-sm'>Total de productos: {numero}</h3> 
         {props.greeting}
         <div>
-            <button type="button" className="btn btn-primary btn-lg btn-floating mx-2" style={{backgroundColor: "#a6be06"}} onClick={sumar}>Agregar al carrito</button>
+            <button type="button" className="btn btn-primary btn-sm btn-floating mx-auto " style={{backgroundColor: "#a6be06"}} onClick={sumar}>Agregar al carrito</button>
         </div>
     </div>
 )
